@@ -5,6 +5,7 @@
 A blockchain based land management system using the PoET consensus algorithm.
 
 ## Important
+Run ***Main.py*** to start.
 The PoET algorithm is implemented in file ***Poet.py*** 
 ## Features
 
