@@ -9,7 +9,7 @@ The PoET algorithm is implemented in file ***Poet.py***
 ## Features
 
 - Ability to register new users to the system with previously owned property. (implemented in file ***Register.py***)
-- User can buy and sell a property. (implemented in file ***Main.py*** in the AddTransac() function)
+- User can buy and sell a property. (implemented in file ***Main.py*** in the `AddTransac()` function)
 - Incorporation of 'Proof of Elapsed Time' consensus algorithm to improve the security of the blockchain. (implemented in file ***Poet.py***)
 - Implementation of Merkle root to calculate the hash of all the transactions in a block. (implemented in file ***Merkle.py***)
 - Users can view the transaction history that is related to a property. (implemented in file ***Search.py***)
