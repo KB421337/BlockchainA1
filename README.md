@@ -30,7 +30,7 @@ The POET algorithm is implemented in file ***Poet.py***
  
 | Functions | Description    |
 | :-------- |:------------------------- |
-| `ProofOfElapsedTime(self, prev_hash: str, data: list) `| calls `poet` to get the winner node, and returns the block hash. [prev hash + block data + merkel root]| 
+| `ProofOfElapsedTime(self, prev_hash: str, data: list) `| calls `poet` to get the winner node, and returns the block hash. [prev hash + block data + merkle root]| 
 |`AddTransaction(self, t: Transaction)`|adds a transaction to the transaction pool,  a new block is added if entries in pool >= 4|
 |`verifySignature(self, S, pus, M)`|verifies if the transaction was done by the correct user by using cryptography|
 |`AddBlock(self)`|mines a new block, if all the transactions are verified the block is added to the blockchain|
@@ -50,7 +50,7 @@ The POET algorithm is implemented in file ***Poet.py***
  |`AddTransac()`| Takes transaction details from user to add to blockchain|
 
  
- ### Merkele.py
+ ### Merkle.py
  
  | Functions | Description    |
  | :-------- | :------------------------- |
