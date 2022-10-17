@@ -2,6 +2,8 @@ import asyncio
 from random import uniform
 from time import sleep
 
+# Incorporating a consensus algorithm (Proof of Elapsed Time) to improve the security of the blockchain:
+#
 # Nodes of the network are put to sleep for a given duration allotted to them through a random lottery
 # The first node to wake up is the winner of the block and gets to add his block to the blockchain
 # Since the nodes go to sleep concurrently, this is simulated using async functions using the inbuilt asyncio library
@@ -9,7 +11,7 @@ from time import sleep
 # The wait function
 async def NodeWait(node: str, delay: float):
     await asyncio.sleep(delay)
-    print(node," done waiting.")
+    print(node," done waiting")
 
 # The function which implements the Proof of Elapsed Time consensus algorithm
 async def Poet():
@@ -30,7 +32,7 @@ async def Poet():
             winner = str(node)
 
     for node in time_map:
-        print("\nUser with uid ", node, " will wait for: ", time_map[node], " seconds.")
+        print("\nUser with uid ", node, " will wait for: ", time_map[node], " seconds")
 
     print("\nWaiting...\n")
     wait_list = []

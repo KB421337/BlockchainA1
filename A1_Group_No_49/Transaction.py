@@ -3,7 +3,7 @@ import uuid
 from hashlib import sha256
 
 class Transaction:
-    #Constructor for a transaction. A transaction UUID is generated to track it.
+    # Constructor for a transaction which generates a transaction UUID to track it
     def __init__(self, uids: int, uidb: int, prs: int, propid: int, amt: int):
         self.uuid = uuid.uuid4().hex
         self.timestamp = int(time.time())

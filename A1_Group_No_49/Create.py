@@ -2,9 +2,10 @@ import pickle
 from Blockchain import Blockchain
 
 def Create():
-    #Initializing a new blockchain
-    lms = Blockchain() #Acronym for Land Management System
-    #Pickling blockchain
+    # Initializing a new blockchain
+    blockchain = Blockchain()
+    
+    # Pickling blockchain
     with open('pickle_chain.txt', 'wb') as f:
-        pickle.dump(lms, f)
+        pickle.dump(blockchain, f)
     return

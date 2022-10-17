@@ -57,9 +57,9 @@ def createKeys(p_public_keys):
             pass
     return public_key, private_key
 
+# Registering new users to the system with previously owned property
 def Register(): 
     create_account = input("Type Y to Create an Account and enter propertyID(s) (space separated): ")
-
     create_account_a = create_account.split(' ')[0]
     create_account_b = create_account.split(' ')[1:]
     pid_list = [int(pid) for pid in create_account_b]
@@ -77,16 +77,16 @@ def Register():
         print("Your Public Key :", public_key)
         print("Your Private Key :", private_key)
         print("Your property IDs: ", pid_list)
-        print("\n")
     
     # Unpickling blockchain
     with open ("pickle_chain.txt", "rb") as f:
-        lms = pickle.load(f) # Acronym for Land Management System
+        lms = pickle.load(f)
 
     # Creating a new node for user
-    lms.node_list.append(Node(uid, public_key, private_key, pid_list))
+    n = Node(uid, public_key, private_key, pid_list)
+    lms.node_list.append(n)
 
-    #Pickling blockchain
+    # Pickling updated blockchain
     with open('pickle_chain.txt', 'wb') as f:
         pickle.dump(lms, f)
 
@@ -97,4 +97,3 @@ def Register():
                     user_data = user_data + str(pid) + ' '
                 user_data = user_data + '\n'
                 f.write(user_data)
-    
